@@ -46,7 +46,7 @@ namespace Dynamics
                                 {
                                     Tuple.Create("Pascal", "Paradis", "pascal.paradis@gmail.com", 26, Image.FromFile("pparadis_avatar.png")),
                                     Tuple.Create("Bill", "Gates", "bill@microsoft.com", 56, Image.FromFile("bgates_avatar.png")),
-                                    Tuple.Create("Homme", "Poux", "hpoux@gmail.com", 42, Image.FromFile("homme_poux_avatar.png")),
+                                    Tuple.Create("Homme", "Poux", "hommepoux@gmail.com", 42, Image.FromFile("homme_poux_avatar.png")),
 
                                 };
             return tupleList;
