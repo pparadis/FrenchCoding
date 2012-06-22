@@ -5,6 +5,15 @@ using System.Dynamic;
 
 namespace Dynamics
 {
+    class UserDTO
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public int Age { get; set; }
+        public Image Avatar { get; set; }
+    }
+
     class TupleExemple
     {
         public TupleExemple()
@@ -32,6 +41,8 @@ namespace Dynamics
             userExpando.Email = user.Item3;
             userExpando.Age = user.Item4;
             userExpando.Avatar = user.Item5;
+
+            var tuple = Tuple.Create("Pascal", "Paradis", "pascal.paradis@gmail.com", 26, Image.FromFile("pparadis_avatar.png"));
 
             return userExpando;
         }
