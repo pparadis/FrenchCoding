@@ -11,26 +11,29 @@ namespace TwitterListManager
                 new ScriptBundle("~/bundles/jquery")
                 .Include("~/Scripts/jquery-1.*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui*"));
+            bundles.Add(
+                new ScriptBundle("~/bundles/site")
+                .Include("~/Scripts/site.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.unobtrusive*",
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui")
+                .Include("~/Scripts/jquery-ui*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval")
+                .Include("~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+            bundles.Add(
+                new ScriptBundle("~/bundles/modernizr")
+                .Include("~/Scripts/modernizr-*"));
 
             //bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css")); 
 
             bundles.Add(new StyleBundle("~/Content/bootstrap")
                 .Include("~/Content/bootstrap.css")
-                .Include("~/Content/bootstrap-responsive.css")
+                .Include("~/Content/bootstrap-responsive.css"));
 
-                );
-
-            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
-                        "~/Content/themes/base/jquery.ui.core.css",
+            bundles.Add(new StyleBundle("~/Content/themes/base/css")
+                .Include("~/Content/themes/base/jquery.ui.core.css",
                         "~/Content/themes/base/jquery.ui.resizable.css",
                         "~/Content/themes/base/jquery.ui.selectable.css",
                         "~/Content/themes/base/jquery.ui.accordion.css",

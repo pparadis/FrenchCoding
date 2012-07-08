@@ -3,13 +3,13 @@
 }
 
 <h2>Index</h2>
-$('#
 
-@using (Ajax.BeginForm("Index", new AjaxOptions { HttpMethod = "Post", UpdateTargetId="test" }))
+
+@using (Ajax.BeginForm("Index", null, new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "test" }, new { id = "frmTwitterList" }))
 {
     @Html.ValidationSummary()
 
-<p><label for="TwitterName" title="Nom" >Nom</label><input id="TwitterName" name="TwitterName" data-val="true" data-val-required="Le champ Nom est requis" type="text" /></p>
-<p><input type="submit" value="Submit" /><a href="#"></a></p>
+    <p><label for="TwitterName" title="Nom" >Nom</label><input id="TwitterName" name="TwitterName" data-val="true" data-val-required="Le champ Nom est requis" type="text" /></p>
+    <a id="TwitterListSubmit" href="#" class="btn">Soumettre</a>
 }
-<span id="test"></span>
+<div id="test"></div>

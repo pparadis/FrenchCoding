@@ -1,7 +1,9 @@
 ﻿@if (ViewBag.Lists != null)
 {
-    foreach (var p in ViewBag.Lists)
+    <ul>
+    @foreach (var p in ViewBag.Lists)
     {
-        <p>@p</p>
+        <li>@p</li>
     }
+    </ul>
 }
