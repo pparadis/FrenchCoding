@@ -3,11 +3,13 @@
 }
 
 <h2>Index</h2>
+$('#
+
 @using (Ajax.BeginForm("Index", new AjaxOptions { HttpMethod = "Post", UpdateTargetId="test" }))
 {
     @Html.ValidationSummary()
 
 <p><label for="TwitterName" title="Nom" >Nom</label><input id="TwitterName" name="TwitterName" data-val="true" data-val-required="Le champ Nom est requis" type="text" /></p>
-<p><input type="submit" value="Submit" /></p>
+<p><input type="submit" value="Submit" /><a href="#"></a></p>
 }
 <span id="test"></span>
