@@ -1,9 +1,11 @@
-﻿@if (ViewBag.Lists != null)
-{
-    <ul>
+﻿<ul style="width: 300px;">
     @foreach (var p in ViewBag.Lists)
     {
-        <li>@p</li>
+        using (Ajax.BeginForm("Copy", null, new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "confirmation" }, new { id = "frmCopyList"+(string)p.Id.ToString() }))
+        {
+            <li>@p.FullName <input type="hidden" name="listId" value="@p.Id"/> <a href="#" data-listId="@p.Id" id="CopyList_@p.Id" class="btn" style="float:right;">Copy</a> </li>
+        }
     }
-    </ul>
-}
+</ul>
+
+<div id="confirmation">@ViewBag.Confirmation</div>
