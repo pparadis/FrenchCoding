@@ -30,7 +30,8 @@ namespace TwitterListManager.Controllers
         public ActionResult Copy(string listId)
         {
             ViewBag.Confirmation = "Yay!";
-            return View("Index");
+            ViewBag.ListId = listId;
+            return PartialView("_ListCopyConfirmation", ViewBag);
         }
     }
 }

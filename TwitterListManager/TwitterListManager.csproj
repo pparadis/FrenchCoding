@@ -241,6 +241,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\List\Index.cshtml" />
     <Content Include="Views\List\_Results.cshtml" />
+    <Content Include="Views\List\_ListCopyConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,9 +3,20 @@
     {
         using (Ajax.BeginForm("Copy", null, new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "confirmation" }, new { id = "frmCopyList"+(string)p.Id.ToString() }))
         {
-            <li>@p.FullName <input type="hidden" name="listId" value="@p.Id"/> <a href="#" data-listId="@p.Id" id="CopyList_@p.Id" class="btn" style="float:right;">Copy</a> </li>
+            <li>@p.FullName <input type="hidden" name="listId" value="@p.Id"/> <a href="#" data-complete-text="finished!" data-loading-text="loading stuff..." data-listId="@p.Id" id="CopyList_@p.Id" data-toggle="button" class="btn" style="float:right;">Copy</a> </li>
         }
     }
 </ul>
 
-<div id="confirmation">@ViewBag.Confirmation</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('a[id*="CopyList"]').click(function () {
+            $('#frmCopyList' + $(this).data('listid')).submit();
+            $(this).button('loading');
+        });
+    });
+
+</script>
+
+<div id="confirmation"></div>

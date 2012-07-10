@@ -1,0 +1,73 @@
+
+<!-- saved from url=(0065)http://twitter.github.com/bootstrap/assets/js/bootstrap-button.js -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css"></style></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;" class="prettyprint"><span class="com">/* ============================================================
+ * bootstrap-button.js v2.0.4
+ * http://twitter.github.com/bootstrap/javascript.html#buttons
+ * ============================================================
+ * Copyright 2012 Twitter, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ============================================================ */</span><span class="pln">
+</span><span class="pun">!</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="str">"use strict"</span><span class="pun">;</span><span class="pln"> </span><span class="com">// jshint ;_;</span><span class="pln">
+  </span><span class="com">/* BUTTON PUBLIC CLASS DEFINITION
+   * ============================== */</span><span class="pln">
+  </span><span class="kwd">var</span><span class="pln"> </span><span class="typ">Button</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">element</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">$element </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="pln">element</span><span class="pun">)</span><span class="pln">
+      </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">options </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">.</span><span class="pln">extend</span><span class="pun">({},</span><span class="pln"> $</span><span class="pun">.</span><span class="pln">fn</span><span class="pun">.</span><span class="pln">button</span><span class="pun">.</span><span class="pln">defaults</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="typ">Button</span><span class="pun">.</span><span class="pln">prototype</span><span class="pun">.</span><span class="pln">setState </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">state</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> d </span><span class="pun">=</span><span class="pln"> </span><span class="str">'disabled'</span><span class="pun">,</span><span class="pln">
+      $el </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">$element</span><span class="pun">,</span><span class="pln">
+      data </span><span class="pun">=</span><span class="pln"> $el</span><span class="pun">.</span><span class="pln">data</span><span class="pun">(),</span><span class="pln">
+      val </span><span class="pun">=</span><span class="pln"> $el</span><span class="pun">.</span><span class="kwd">is</span><span class="pun">(</span><span class="str">'input'</span><span class="pun">)</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> </span><span class="str">'val'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'html'</span><span class="pln">
+    state </span><span class="pun">=</span><span class="pln"> state </span><span class="pun">+</span><span class="pln"> </span><span class="str">'Text'</span><span class="pln">
+    data</span><span class="pun">.</span><span class="pln">resetText </span><span class="pun">||</span><span class="pln"> $el</span><span class="pun">.</span><span class="pln">data</span><span class="pun">(</span><span class="str">'resetText'</span><span class="pun">,</span><span class="pln"> $el</span><span class="pun">[</span><span class="pln">val</span><span class="pun">]())</span><span class="pln">
+    $el</span><span class="pun">[</span><span class="pln">val</span><span class="pun">](</span><span class="pln">data</span><span class="pun">[</span><span class="pln">state</span><span class="pun">]</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">options</span><span class="pun">[</span><span class="pln">state</span><span class="pun">])</span><span class="pln">
+    </span><span class="com">// push to event loop to allow forms to submit</span><span class="pln">
+    setTimeout</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      state </span><span class="pun">==</span><span class="pln"> </span><span class="str">'loadingText'</span><span class="pln"> </span><span class="pun">?</span><span class="pln"> $el</span><span class="pun">.</span><span class="pln">addClass</span><span class="pun">(</span><span class="pln">d</span><span class="pun">).</span><span class="pln">attr</span><span class="pun">(</span><span class="pln">d</span><span class="pun">,</span><span class="pln"> d</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> $el</span><span class="pun">.</span><span class="pln">removeClass</span><span class="pun">(</span><span class="pln">d</span><span class="pun">).</span><span class="pln">removeAttr</span><span class="pun">(</span><span class="pln">d</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="typ">Button</span><span class="pun">.</span><span class="pln">prototype</span><span class="pun">.</span><span class="pln">toggle </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> $parent </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">$element</span><span class="pun">.</span><span class="pln">parent</span><span class="pun">(</span><span class="str">'[data-toggle="buttons-radio"]'</span><span class="pun">)</span><span class="pln">
+    $parent </span><span class="pun">&amp;&amp;</span><span class="pln"> $parent</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">'.active'</span><span class="pun">).</span><span class="pln">removeClass</span><span class="pun">(</span><span class="str">'active'</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">$element</span><span class="pun">.</span><span class="pln">toggleClass</span><span class="pun">(</span><span class="str">'active'</span><span class="pun">)</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="com">/* BUTTON PLUGIN DEFINITION
+   * ======================== */</span><span class="pln">
+  $</span><span class="pun">.</span><span class="pln">fn</span><span class="pun">.</span><span class="pln">button </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">option</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">each</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">var</span><span class="pln"> $this </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">),</span><span class="pln">
+        data </span><span class="pun">=</span><span class="pln"> $this</span><span class="pun">.</span><span class="pln">data</span><span class="pun">(</span><span class="str">'button'</span><span class="pun">),</span><span class="pln">
+        options </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">typeof</span><span class="pln"> option </span><span class="pun">==</span><span class="pln"> </span><span class="str">'object'</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> option
+      </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">data</span><span class="pun">)</span><span class="pln"> $this</span><span class="pun">.</span><span class="pln">data</span><span class="pun">(</span><span class="str">'button'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="pln">data </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Button</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">)))</span><span class="pln">
+      </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">option </span><span class="pun">==</span><span class="pln"> </span><span class="str">'toggle'</span><span class="pun">)</span><span class="pln"> data</span><span class="pun">.</span><span class="pln">toggle</span><span class="pun">()</span><span class="pln">
+      </span><span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">option</span><span class="pun">)</span><span class="pln"> data</span><span class="pun">.</span><span class="pln">setState</span><span class="pun">(</span><span class="pln">option</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">})</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  $</span><span class="pun">.</span><span class="pln">fn</span><span class="pun">.</span><span class="pln">button</span><span class="pun">.</span><span class="pln">defaults </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    loadingText</span><span class="pun">:</span><span class="pln"> </span><span class="str">'loading...'</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  $</span><span class="pun">.</span><span class="pln">fn</span><span class="pun">.</span><span class="pln">button</span><span class="pun">.</span><span class="typ">Constructor</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Button</span><span class="pln">
+  </span><span class="com">/* BUTTON DATA-API
+   * =============== */</span><span class="pln">
+  $</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    $</span><span class="pun">(</span><span class="str">'body'</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'click.button.data-api'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'[data-toggle^=button]'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">var</span><span class="pln"> $btn </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="pln">e</span><span class="pun">.</span><span class="pln">target</span><span class="pun">)</span><span class="pln">
+      </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">$btn</span><span class="pun">.</span><span class="pln">hasClass</span><span class="pun">(</span><span class="str">'btn'</span><span class="pun">))</span><span class="pln"> $btn </span><span class="pun">=</span><span class="pln"> $btn</span><span class="pun">.</span><span class="pln">closest</span><span class="pun">(</span><span class="str">'.btn'</span><span class="pun">)</span><span class="pln">
+      $btn</span><span class="pun">.</span><span class="pln">button</span><span class="pun">(</span><span class="str">'toggle'</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">})</span><span class="pln">
+  </span><span class="pun">})</span><span class="pln">
+</span><span class="pun">}(</span><span class="pln">window</span><span class="pun">.</span><span class="pln">jQuery</span><span class="pun">);</span></pre><link href="chrome-extension://piekbefgpgdecckjcpffhnacjflfoddg/prettify.css" rel="stylesheet" type="text/css"></body></html>

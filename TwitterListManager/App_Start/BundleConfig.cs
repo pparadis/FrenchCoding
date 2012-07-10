@@ -13,6 +13,7 @@ namespace TwitterListManager
 
             bundles.Add(
                 new ScriptBundle("~/bundles/site")
+                .Include("~/Scripts/bootstrap.js")
                 .Include("~/Scripts/site.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui")
