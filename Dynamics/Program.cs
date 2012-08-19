@@ -18,9 +18,6 @@ namespace Dynamics
             var tupleExample = new TupleExemple();
             
             
-            
-            
-            
             //dynamic expando = new ExpandoObject();
             //expando.Title = "Ceci est un titre";
             //expando.Prenom = "Pascal";
