@@ -4,6 +4,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Text;
+using CollectionTests;
 
 namespace Console
 {
@@ -11,36 +12,67 @@ namespace Console
     {
         static void Main(string[] args)
         {
-            System.Console.ReadLine();
-            if(Directory.Exists(@"c:\frenchcoding\extract"))
+            List<dynamic> elements = new List<dynamic>();
+            elements.Add("Zéro");
+            elements.Add("Un");
+            elements.Add("Deux");
+            elements.Add("Trois");
+            elements.Add("Quatre");
+            elements.Add("Cinq");
+            elements.Add("Six");
+            elements.Add("Sept");
+            elements.Add("Huit");
+            elements.Add("Neuf");
+            elements.Add("Dix");
+            elements.Add("Onze");
+            elements.Add("Douze");
+
+            foreach(var x in YieldTest.GetUsersUnder18(elements))
             {
-                Directory.Delete(@"c:\frenchcoding\extract",true);
-                File.Delete(@"c:\frenchcoding\start.zip");
+                System.Console.WriteLine(x);
+            }
+            System.Console.ReadKey();
+
+            foreach (var x in YieldTest.Fibonacci(10))
+            {
+                System.Console.WriteLine(x);
+            }
+
+            System.Console.ReadKey();
+        }
+
+        private void CompressionTests()
+        {
+            //System.Console.ReadLine();
+            //if(Directory.Exists(@"c:\frenchcoding\extract"))
+            //{
+            //    Directory.Delete(@"c:\frenchcoding\extract",true);
+            //    File.Delete(@"c:\frenchcoding\start.zip");
 
 
-            }
-            
-            using (ZipArchive archive = ZipFile.Open(@"c:\frenchcoding\start.zip", ZipArchiveMode.Create))
-            {
-                archive.CreateEntryFromFile(@"c:\frenchcoding\test.txt", "test_compress.txt");
-                archive.CreateEntryFromFile(@"c:\frenchcoding\test2.txt", "test_compress2.txt");
-                archive.CreateEntryFromFile(@"c:\frenchcoding\test3.txt", "test_compress3.txt");
-            }
+            //}
 
-            using (ZipArchive archive = ZipFile.Open(@"c:\frenchcoding\start.zip", ZipArchiveMode.Read))
-            {
-                archive.ExtractToDirectory(@"c:\frenchcoding\extract\");
-            }
+            //using (ZipArchive archive = ZipFile.Open(@"c:\frenchcoding\start.zip", ZipArchiveMode.Create))
+            //{
+            //    archive.CreateEntryFromFile(@"c:\frenchcoding\test.txt", "test_compress.txt");
+            //    archive.CreateEntryFromFile(@"c:\frenchcoding\test2.txt", "test_compress2.txt");
+            //    archive.CreateEntryFromFile(@"c:\frenchcoding\test3.txt", "test_compress3.txt");
+            //}
 
-            using (ZipArchive archive = ZipFile.Open(@"c:\frenchcoding\start.zip", ZipArchiveMode.Update))
-            {
-                archive
-                    .GetEntry("test_compress2.txt")
-                    .Delete();
-                archive
-                    .GetEntry("test_compress3.txt")
-                    .Delete();
-            }
+            //using (ZipArchive archive = ZipFile.Open(@"c:\frenchcoding\start.zip", ZipArchiveMode.Read))
+            //{
+            //    archive.ExtractToDirectory(@"c:\frenchcoding\extract\");
+            //}
+
+            //using (ZipArchive archive = ZipFile.Open(@"c:\frenchcoding\start.zip", ZipArchiveMode.Update))
+            //{
+            //    archive
+            //        .GetEntry("test_compress2.txt")
+            //        .Delete();
+            //    archive
+            //        .GetEntry("test_compress3.txt")
+            //        .Delete();
+            //}
 
             //using (FileStream zipToOpen = new FileStream(@"c:\frenchcoding\start.zip", FileMode.Open))
             //{

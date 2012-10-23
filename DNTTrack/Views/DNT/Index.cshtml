@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "DNT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DNT</h2>
+<ul>
+@foreach (var x in Request.Headers)
+{
+    <li><strong>@(x.ToString())</strong> - @Request.Headers[x.ToString()].ToString()</li>
+}
+</ul>
