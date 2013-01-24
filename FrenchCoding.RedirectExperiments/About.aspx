@@ -17,19 +17,24 @@
 
         <p>        
             Use this area to provide additional information.
+            ul[data-bind="foreach:customers"]>li*4>span{Caption $$}+input[type=text data-bind="value:$$"]
+
         </p>
     </article>
 
+    <div id="Menu"></div>
 
+    <img src="/Images/accent.png" alt="" />
 
+    <ul>
+        <li>Lorem ipsum dolor.</li>
+        <li>Sit amet, consectetur.</li>
+        <li>Adipiscing elit fusce.</li>
+        <li>Vel sapien elit.</li>
+        <li>In malesuada semper.</li>
+    </ul>
 
-
-
-
-
-
-
-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel.
 
 
 

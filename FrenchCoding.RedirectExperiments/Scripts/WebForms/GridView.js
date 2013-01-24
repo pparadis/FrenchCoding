@@ -16,17 +16,7 @@ function GridView_createPropertyString() {
 function GridView_setStateValue() {
     this.stateField.value = this.createPropertyString();
 }
-function GridView_OnCallback (result, context) {
-    var value = new String(result);
-    var valsArray = value.split("|");
-    var innerHtml = valsArray[4];
-    for (var i = 5; i < valsArray.length; i++) {
-        innerHtml += "|" + valsArray[i];
-    }
-    context.panelElement.innerHTML = innerHtml;
-    context.stateField.value = createPropertyStringFromValues_GridView(valsArray[0], valsArray[1], valsArray[2], valsArray[3]);
-}
-function GridView_getHiddenFieldContents(arg) {
+function GridView_OnCallback(n,t){for(var f=new String(n),i=f.split("|"),u=i[4],r=5;r<i.length;r++)u+="|"+i[r];t.panelElement.innerHTML=u,t.stateField.value=createPropertyStringFromValues_GridView(i[0],i[1],i[2],i[3])}function GridView_getHiddenFieldContents(arg) {
     return arg + "|" + this.stateField.value;
 }
 function createPropertyStringFromValues_GridView(pageIndex, sortDirection, sortExpression, dataKeys) {

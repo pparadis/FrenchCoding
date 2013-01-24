@@ -41,6 +41,9 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\WebGrease.1.0.0\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Glimpse.Core">
+      <HintPath>..\packages\Glimpse.0.87\lib\net40\Glimpse.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ScriptManager.jQuery">
       <HintPath>..\packages\Microsoft.ScriptManager.jQuery.1.6.2\lib\Microsoft.ScriptManager.jQuery.dll</HintPath>
@@ -92,6 +95,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\LoginAjax.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="App_Readme\glimpse.readme.txt" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -142,6 +146,10 @@
     <Content Include="Images\windowsLive.png" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="Scripts\JavaScript1.js" />
+    <Content Include="Scripts\jquery-1.6.2-vsdoc.min.js">
+      <DependentUpon>jquery-1.6.2-vsdoc.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js">
       <DependentUpon>jquery-1.6.2.js</DependentUpon>
@@ -151,11 +159,23 @@
       <DependentUpon>jquery-ui-1.8.11.js</DependentUpon>
     </Content>
     <Content Include="Scripts\modernizr-2.0.6-development-only.js" />
+    <Content Include="Scripts\modernizr-2.0.6-development-only.min.js">
+      <DependentUpon>modernizr-2.0.6-development-only.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\script2.js">
+      <DependentUpon>script2.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\script2.min.js">
+      <DependentUpon>script2.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
     <Content Include="Scripts\WebForms\Menu.js" />
     <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.min.js">
+      <DependentUpon>MenuStandards.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
@@ -176,7 +196,23 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\_references.min.js">
+      <DependentUpon>_references.js</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
+    <Content Include="Scripts\script2.coffee" />
+    <Content Include="Scripts\jquery-1.6.2-vsdoc.min.js.map">
+      <DependentUpon>jquery-1.6.2-vsdoc.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\modernizr-2.0.6-development-only.min.js.map">
+      <DependentUpon>modernizr-2.0.6-development-only.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.min.js.map">
+      <DependentUpon>_references.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\WebForms\MenuStandards.min.js.map">
+      <DependentUpon>MenuStandards.js</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -286,7 +322,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>31875</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:62029/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
