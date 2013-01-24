@@ -1,0 +1,1 @@
+# Extension Google Chrome permettant de prendre un screenshot de votre onglet.
