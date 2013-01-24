@@ -36,6 +36,6 @@ b.foo();
 
 
 //fails
-b.prototype.baz = function() {
+b.prototype.baz = new function() {
 	console.log(4);
 }
