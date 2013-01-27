@@ -53,6 +53,8 @@ namespace AutoMapperExperiments
         }
     }
 
+    //This is a comment
+
     public class Product
     {
         public decimal Price { get; set; }
