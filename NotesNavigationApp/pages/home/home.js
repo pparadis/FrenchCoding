@@ -3,6 +3,8 @@
 
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (element, options) {
+            WinJS.Utilities.query("a").listen("click", this.linkClickEventHandler, false);
+
             var ratingControlDiv = document.getElementById("ratingControlDiv");
             var ratingControl = ratingControlDiv.winControl;
             ratingControl.addEventListener("change", this.ratingChanged, false);
@@ -57,12 +59,14 @@
 
         nameInputChanged: function (eventInfo) {
             var nameInput = eventInfo.srcElement;
-
-            // Store the user's name for multiple sessions.
             var appData = Windows.Storage.ApplicationData.current;
             var roamingSettings = appData.roamingSettings;
             roamingSettings.values["userName"] = nameInput.value;
+        },
+        linkClickEventHandler: function (eventInfo) {
+            eventInfo.preventDefault();
+            var link = eventInfo.target;
+            WinJS.Navigation.navigate(link.href);
         }
-
     });
 })();

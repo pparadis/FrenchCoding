@@ -16,8 +16,10 @@
 </head>
 <body>
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
-    <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
-        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
-    </div> -->
+    <div id="appbar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'top'}">
+        <hr data-win-control="WinJS.UI.AppBarCommand" data-win-options="{type:'separator',section:'global'}" />
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'homeButton',label:'Home',icon:'home',section:'global', tooltip:'Go to the home page', type: 'button'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'page2Button',label:'Page 2',icon:'page',section:'global', tooltip:'Go to page 2', type: 'button'}"></button>
+    </div>
 </body>
 </html>

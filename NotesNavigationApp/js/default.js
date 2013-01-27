@@ -25,6 +25,13 @@
                 nav.history = app.sessionState.history;
             }
             args.setPromise(WinJS.UI.processAll().then(function () {
+                var appbar = document.getElementById("appbar").winControl;
+
+                var homeButton = appbar.getCommandById("homeButton");
+                homeButton.addEventListener("click", goToHomePage, false);
+                var page2Button = appbar.getCommandById("page2Button");
+                page2Button.addEventListener("click", goToPage2, false);
+
                 if (nav.location) {
                     nav.history.current.initialPlaceholder = true;
                     return nav.navigate(nav.location, nav.state);
@@ -42,6 +49,14 @@
         // suspended, call args.setPromise().
         app.sessionState.history = nav.history;
     };
+
+    function goToHomePage(eventInfo) {
+        WinJS.Navigation.navigate("/pages/home/home.html");
+    }
+
+    function goToPage2(eventInfo) {
+        WinJS.Navigation.navigate("/pages/page2/page2.html");
+    }
 
     app.start();
 })();
