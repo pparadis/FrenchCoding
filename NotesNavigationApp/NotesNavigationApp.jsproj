@@ -64,9 +64,9 @@
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
-    <Content Include="pages\page2\page2.css" />
-    <Content Include="pages\page2\page2.html" />
-    <Content Include="pages\page2\page2.js" />
+    <Content Include="pages\notelist\notelist.css" />
+    <Content Include="pages\notelist\notelist.html" />
+    <Content Include="pages\notelist\notelist.js" />
     <None Include="NotesNavigationApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
