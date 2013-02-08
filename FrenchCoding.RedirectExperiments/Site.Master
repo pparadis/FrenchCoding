@@ -4,6 +4,8 @@
 <html lang="en">
 <head id="Head1" runat="server">
     <meta charset="utf-8" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.9.0/dropbox.min.js"></script>
+
     <title>
         <%: Page.Title %>
         - My ASP.NET Application</title>

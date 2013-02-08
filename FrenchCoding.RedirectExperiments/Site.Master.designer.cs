@@ -7,13 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FrenchCoding.RedirectExperiments
-{
-
-
-    public partial class SiteMaster
-    {
-
+namespace FrenchCoding.RedirectExperiments {
+    
+    
+    public partial class SiteMaster {
+        
+        /// <summary>
+        /// Head1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        
         /// <summary>
         /// HeadContent control.
         /// </summary>
@@ -22,7 +29,7 @@ namespace FrenchCoding.RedirectExperiments
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
-
+        
         /// <summary>
         /// FeaturedContent control.
         /// </summary>
@@ -31,7 +38,7 @@ namespace FrenchCoding.RedirectExperiments
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder FeaturedContent;
-
+        
         /// <summary>
         /// MainContent control.
         /// </summary>

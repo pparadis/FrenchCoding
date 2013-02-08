@@ -2,6 +2,7 @@
 <webessentials version="1.9">
   <settings>
     <CoffeeScriptGenerateJsFile>True</CoffeeScriptGenerateJsFile>
+    <CoffeeScriptMargin_width>899</CoffeeScriptMargin_width>
     <CoffeeScriptMinify>True</CoffeeScriptMinify>
     <CoffeeScriptShowPreviewWindow>True</CoffeeScriptShowPreviewWindow>
     <CoffeeScriptWrapClosure>True</CoffeeScriptWrapClosure>
