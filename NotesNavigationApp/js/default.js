@@ -8,7 +8,7 @@
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
     var nav = WinJS.Navigation;
-
+    
     app.addEventListener("activated", function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
@@ -57,6 +57,5 @@
     function goToPage2(eventInfo) {
         WinJS.Navigation.navigate("/pages/page2/page2.html");
     }
-
     app.start();
 })();

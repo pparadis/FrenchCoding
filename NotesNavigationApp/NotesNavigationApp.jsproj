@@ -53,12 +53,17 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="coffee\driver.coffee" />
+    <Content Include="coffee\driver.js" />
+    <Content Include="coffee\driver.min.js" />
     <Content Include="css\default.css" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\default.js" />
+    <Content Include="js\dropbox-lib.js" />
+    <Content Include="js\dropbox.min.js" />
     <Content Include="js\navigator.js" />
     <Content Include="pages\home\home.css" />
     <Content Include="pages\home\home.html" />

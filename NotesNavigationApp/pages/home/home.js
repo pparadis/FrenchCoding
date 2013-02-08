@@ -41,7 +41,7 @@
             var userName = document.getElementById("nameInput").value;
             var greetingString = "Hello, " + userName + "!";
             document.getElementById("greetingOutput").innerText = greetingString;
-
+            dropbox();
             // Save the session data. 
             WinJS.Application.sessionState.greetingOutput = greetingString;
         },
@@ -68,5 +68,6 @@
             var link = eventInfo.target;
             WinJS.Navigation.navigate(link.href);
         }
+
     });
 })();
