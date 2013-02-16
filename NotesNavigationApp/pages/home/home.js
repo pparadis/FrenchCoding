@@ -41,9 +41,14 @@
             var userName = document.getElementById("nameInput").value;
             var greetingString = "Hello, " + userName + "!";
             document.getElementById("greetingOutput").innerText = greetingString;
-            dropbox();
             // Save the session data. 
             WinJS.Application.sessionState.greetingOutput = greetingString;
+
+            var applicationData = Windows.Storage.ApplicationData.current;
+            var localSettings = applicationData.localSettings;
+
+            console.log(localSettings.values["OAUTH_TOKEN_SECRET"]);
+            console.log(localSettings.values["OAUTH_TOKEN"]);
         },
 
         ratingChanged: function (eventInfo) {

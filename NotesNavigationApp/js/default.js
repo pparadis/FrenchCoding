@@ -26,7 +26,7 @@
             }
             args.setPromise(WinJS.UI.processAll().then(function () {
                 var appbar = document.getElementById("appbar").winControl;
-
+                //getRequestToken();
                 var homeButton = appbar.getCommandById("homeButton");
                 homeButton.addEventListener("click", goToHomePage, false);
                 var page2Button = appbar.getCommandById("page2Button");

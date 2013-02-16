@@ -146,6 +146,13 @@
     <Content Include="Images\windowsLive.png" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
+    <TypeScriptCompile Include="Scripts\file1.ts" />
+    <Content Include="Scripts\file1.js">
+      <DependentUpon>file1.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\file1.min.js">
+      <DependentUpon>file1.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\JavaScript1.js" />
     <Content Include="Scripts\jquery-1.6.2-vsdoc.min.js">
       <DependentUpon>jquery-1.6.2-vsdoc.js</DependentUpon>
