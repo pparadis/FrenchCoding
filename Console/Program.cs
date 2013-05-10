@@ -12,31 +12,33 @@ namespace Console
     {
         static void Main(string[] args)
         {
-            List<dynamic> elements = new List<dynamic>();
-            elements.Add("Zéro");
-            elements.Add("Un");
-            elements.Add("Deux");
-            elements.Add("Trois");
-            elements.Add("Quatre");
-            elements.Add("Cinq");
-            elements.Add("Six");
-            elements.Add("Sept");
-            elements.Add("Huit");
-            elements.Add("Neuf");
-            elements.Add("Dix");
-            elements.Add("Onze");
-            elements.Add("Douze");
+            //List<dynamic> elements = new List<dynamic>();
+            //elements.Add("Zéro");
+            //elements.Add("Un");
+            //elements.Add("Deux");
+            //elements.Add("Trois");
+            //elements.Add("Quatre");
+            //elements.Add("Cinq");
+            //elements.Add("Six");
+            //elements.Add("Sept");
+            //elements.Add("Huit");
+            //elements.Add("Neuf");
+            //elements.Add("Dix");
+            //elements.Add("Onze");
+            //elements.Add("Douze");
 
-            foreach(var x in YieldTest.GetUsersUnder18(elements))
-            {
-                System.Console.WriteLine(x);
-            }
-            System.Console.ReadKey();
+            //foreach(var x in YieldTest.GetUsersUnder18(elements))
+            //{
+            //    System.Console.WriteLine(x);
+            //}
+            //System.Console.ReadKey();
 
-            foreach (var x in YieldTest.Fibonacci(10))
-            {
-                System.Console.WriteLine(x);
-            }
+            //foreach (var x in YieldTest.Fibonacci(10))
+            //{
+            //    System.Console.WriteLine(x);
+            //}
+
+            FrenchEncoding();
 
             System.Console.ReadKey();
         }
@@ -86,6 +88,21 @@ namespace Console
             //        }
             //    }
             //}
+        }
+
+        private static void FrenchEncoding()
+        {
+            using (var fs = new FileStream(@"c:\frenchcoding\frenchencoding.csv", FileMode.OpenOrCreate, FileAccess.ReadWrite))
+            {
+                var preamble = new UTF8Encoding(true).GetPreamble();
+                fs.Write(preamble,0,preamble.Count());
+
+                var byteArrayLine1 = System.Text.Encoding.UTF8.GetBytes("courriel, nom, prénom"+Environment.NewLine);
+                fs.Write(byteArrayLine1, 0, byteArrayLine1.Count());
+
+                var byteArrayLine2 = System.Text.Encoding.UTF8.GetBytes("pascal.paradis@gmail.com, Paradis, Pascal");
+                fs.Write(byteArrayLine2, 0, byteArrayLine2.Count());
+            }
         }
     }
 }
