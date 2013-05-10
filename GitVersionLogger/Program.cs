@@ -11,6 +11,7 @@ namespace GitVersionLogger
         static void Main(string[] args)
         {
 
+
         }
     }
 }
