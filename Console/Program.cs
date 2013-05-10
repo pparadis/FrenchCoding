@@ -90,6 +90,7 @@ namespace Console
             //}
         }
 
+
         private static void FrenchEncoding()
         {
             using (var fs = new FileStream(@"c:\frenchcoding\frenchencoding.csv", FileMode.OpenOrCreate, FileAccess.ReadWrite))
