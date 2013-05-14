@@ -254,7 +254,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PreBuildEvent>C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe $(ProjectDir)\Build\git-version-extract.ps1 -FilePath $(ProjectDir)\version.txt</PreBuildEvent>
+    <PreBuildEvent>powershell.exe $(ProjectDir)\Build\git-version-extract.ps1 -FilePath $(ProjectDir)\version.txt</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
