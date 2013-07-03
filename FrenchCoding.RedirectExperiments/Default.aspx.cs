@@ -11,7 +11,6 @@ namespace FrenchCoding.RedirectExperiments
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.RedirectPermanent("~/Contact.aspx");
         }
     }
 }

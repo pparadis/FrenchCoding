@@ -1,3 +1,4 @@
+//CdnPath=http://ajax.aspnetcdn.com/ajax/4.5/6/Focus.js
 function WebForm_FindFirstFocusableChild(control) {
     if (!control || !(control.tagName)) {
         return null;

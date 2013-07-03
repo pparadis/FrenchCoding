@@ -1,3 +1,4 @@
+﻿//CdnPath=http://ajax.aspnetcdn.com/ajax/4.5/6/MicrosoftAjaxSerialization.js
 //----------------------------------------------------------
 // Copyright (C) Microsoft Corporation. All rights reserved.
 //----------------------------------------------------------

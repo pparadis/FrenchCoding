@@ -1,3 +1,4 @@
+//CdnPath=http://ajax.aspnetcdn.com/ajax/4.5/6/DetailsView.js
 function DetailsView() {
     this.pageIndex = null;
     this.dataKeys = null;

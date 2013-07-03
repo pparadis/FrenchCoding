@@ -1,3 +1,4 @@
+//CdnPath=http://ajax.aspnetcdn.com/ajax/4.5/6/Menu.js
 var __rootMenuItem;
 var __menuInterval;
 var __scrollPanel;

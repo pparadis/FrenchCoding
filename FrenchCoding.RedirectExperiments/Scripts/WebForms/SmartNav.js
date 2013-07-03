@@ -1,3 +1,4 @@
+//CdnPath=http://ajax.aspnetcdn.com/ajax/4.5/6/SmartNav.js
 var snSrc;
 if ((typeof(window.__smartNav) == "undefined") || (window.__smartNav == null))
 {
