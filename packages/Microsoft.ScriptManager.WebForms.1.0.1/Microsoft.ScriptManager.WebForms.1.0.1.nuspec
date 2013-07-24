@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.ScriptManager.WebForms</id>
+    <version>1.0.1</version>
+    <title />
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/web_optimization.htm</licenseUrl>
+    <iconUrl>https://download-codeplex.sec.s-msft.com/Download?ProjectName=aspnetwebstack&amp;DownloadId=360555</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This contents of this package has been moved to the Microsoft.AspNet.ScriptManager.WebForms package.</description>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.ScriptManager.WebForms" version="4.5.6" />
+    </dependencies>
+  </metadata>
+</package>

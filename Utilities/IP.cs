@@ -18,7 +18,9 @@ namespace Utilities
             }
             else
             {
-                ipString = request.ServerVariables["HTTP_X_FORWARDED_FOR"].Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
+                ipString = request
+                    .ServerVariables["HTTP_X_FORWARDED_FOR"]
+                    .Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)
                     .FirstOrDefault();
             }
 

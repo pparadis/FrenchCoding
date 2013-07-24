@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.ScriptManager.jQuery</id>
+    <version>1.7.2.1</version>
+    <title>Microsoft.ScriptManager.jQuery</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <projectUrl>http://www.asp.net/</projectUrl>
+    <iconUrl>https://download-codeplex.sec.s-msft.com/Download?ProjectName=aspnetwebstack&amp;DownloadId=360555</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This contents of this package has been moved to the AspNet.ScriptManager.jQuery package.</description>
+    <dependencies>
+      <dependency id="AspNet.ScriptManager.jQuery" version="1.7.2" />
+      <dependency id="jQuery" version="1.7.2" />
+    </dependencies>
+  </metadata>
+</package>
