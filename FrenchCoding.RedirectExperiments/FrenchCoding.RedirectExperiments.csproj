@@ -256,6 +256,7 @@
     <Content Include="Scripts\_references.min.js">
       <DependentUpon>_references.js</DependentUpon>
     </Content>
+    <Content Include="version.txt" />
     <Content Include="Web.config" />
     <Content Include="Scripts\script2.coffee" />
     <Content Include="Scripts\_references.min.js.map">
