@@ -16,8 +16,10 @@ namespace Twitter
         {
             var service = new TwitterService(CONSUMER_KEY, CONSUMER_SECRET);
             var expandoList = new List<dynamic>();
+            var options = new ListListsForOptions();
+            options.ScreenName = "pparadis";
             expandoList = service
-                .ListListsFor(twitterName, -1)
+                .ListListsFor(options)
                 .Select(p => ToExpando(p))
                 .OrderBy(p => p.FullName)
                 .ToList();
