@@ -11,24 +11,46 @@ namespace AutoMapperExperiments
     {
         static void Main(string[] args)
         {
-            var customer = new Customer
+            //var customer = new Customer
+            //{
+            //    Name = "George Costanza"
+            //};
+            //var order = new Order
+            //{
+            //    Customer = customer
+            //};
+            //var bosco = new Product
+            //{
+            //    Name = "Bosco",
+            //    Price = 4.99m
+            //};
+            //order.AddOrderLineItem(bosco, 15);
+
+            //configuration, se réalise habituellement au démarrage de votre application
+            Mapper.CreateMap<Model, ViewModel>();
+
+            //création d'un objet "Model" pouvant provenir d'une base de données
+            var model = new Model
             {
-                Name = "George Costanza"
+                PageTitle = "Titre de page"
             };
-            var order = new Order
-            {
-                Customer = customer
-            };
-            var bosco = new Product
-            {
-                Name = "Bosco",
-                Price = 4.99m
-            };
-            order.AddOrderLineItem(bosco, 15);
-            
-            Mapper.CreateMap<Order, OrderDto>();
-            OrderDto dto = Mapper.Map<Order, OrderDto>(order);
+
+            //Mappage du Model en ViewModel
+            var viewModel = Mapper.Map<Model, ViewModel>(model);
+
+            //retourne "Model
+            Console.WriteLine(viewModel.PageTitle);
         }
+    }
+
+    public class Model
+    {
+        public string PageTitle { get; set; }
+    }
+
+    public class ViewModel
+    {
+        public string PageTitle { get; set; }
     }
 
     public class Order

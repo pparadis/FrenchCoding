@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamics", "Dynamics\Dynamics.csproj", "{E765AC1E-3417-4B4C-AD78-752414B61EEC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter", "Twitter\Twitter.csproj", "{85AAFA5E-2FF4-4C13-9F8E-39E4CC85669E}"
@@ -35,6 +37,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrenchCoding.Nancy", "Nancy\FrenchCoding.Nancy.csproj", "{B4F9C525-5C56-440E-B4C2-972A33D7C8CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Host.Web", "Test.Host.Web\Test.Host.Web.csproj", "{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDb", "MongoDb\MongoDb.csproj", "{40B33131-B706-4AFA-A042-11C056439C92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -590,6 +594,41 @@ Global
 		{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6}.Win8|Mixed Platforms.Build.0 = Release|Any CPU
 		{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6}.Win8|x64.ActiveCfg = Release|Any CPU
 		{68F5F5F3-B8BB-4911-875F-6F00AAE04EA6}.Win8|x86.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug_All|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug_All|Any CPU.Build.0 = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug_All|ARM.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug_All|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug_All|Mixed Platforms.Build.0 = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug_All|x64.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug_All|x86.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.RedirectExperiments|Any CPU.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.RedirectExperiments|Any CPU.Build.0 = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.RedirectExperiments|ARM.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.RedirectExperiments|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.RedirectExperiments|Mixed Platforms.Build.0 = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.RedirectExperiments|x64.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.RedirectExperiments|x86.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Release|ARM.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Release|x64.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Release|x86.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Win8|Any CPU.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Win8|Any CPU.Build.0 = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Win8|ARM.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Win8|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Win8|Mixed Platforms.Build.0 = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Win8|x64.ActiveCfg = Release|Any CPU
+		{40B33131-B706-4AFA-A042-11C056439C92}.Win8|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
