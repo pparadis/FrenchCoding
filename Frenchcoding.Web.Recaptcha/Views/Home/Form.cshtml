@@ -1,3 +1,9 @@
 ﻿@model dynamic
 
-This is form
+@using (Ajax.BeginForm("Form", "Home", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "target", OnComplete = "captcha(this)"}))
+{
+    @Html.ValidationSummary()
+    <div id="captcha"></div>
+    <input type="submit" value="Submit" />
+
+}

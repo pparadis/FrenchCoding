@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
+using Recaptcha.Web;
+using Recaptcha.Web.Mvc;
+using System;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace Frenchcoding.Web.Recaptcha.Controllers
@@ -28,8 +29,29 @@ namespace Frenchcoding.Web.Recaptcha.Controllers
         }
 
         [HttpPost]
-        public ActionResult Form()
+        public async Task<ActionResult> Form()
         {
+            RecaptchaVerificationHelper recaptchaHelper = this.GetRecaptchaVerificationHelper();
+
+            if (String.IsNullOrEmpty(recaptchaHelper.Response))
+            {
+                ModelState.AddModelError("", "Captcha answer cannot be empty.");
+                return PartialView();
+            }
+
+            RecaptchaVerificationResult recaptchaResult = await recaptchaHelper.VerifyRecaptchaResponseTaskAsync();
+
+            if (recaptchaResult != RecaptchaVerificationResult.Success)
+            {
+                ModelState.AddModelError("", "Incorrect captcha answer.");
+                return PartialView();
+            }
+
+            if (ModelState.IsValid)
+            {
+                return PartialView("_FormResult");
+            }
+
             return PartialView();
         }
     }

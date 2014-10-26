@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Configuration
+@{
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title.</h2>
@@ -15,11 +16,20 @@
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
 </address>
+<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        captcha();
+    });
 
-@using(Ajax.BeginForm("Form", "Home", new AjaxOptions{ HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "target"}))
-{
-    <input type="submit" value="Submit" />
-}
 
-<div id="target"></div>
+    function captcha() {
+        Recaptcha.create("@(ConfigurationManager.AppSettings["recaptchaPublicKey"])", "captcha", { theme: "red", callback: Recaptcha.focus_response_field });
+    }
+</script>
+
+<div id="target">
+    @Html.Partial("Form")
+</div>
+
 
